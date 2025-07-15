@@ -107,8 +107,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('Fruit-storage/activity/{id}', [\App\Http\Controllers\FruitStorageController::class, 'ChildActivity'])->name('FS activity');
     Route::get('Fruit-storage/activity-one/{id}', [\App\Http\Controllers\FruitStorageController::class, 'TruckArrivalToNursery'])->name('sign.stage20');
     Route::patch('/Fruit-storage/truck-arrival-times/{id}', [\App\Http\Controllers\FruitStorageController::class, 'TruckArrivalTimes']);
-    Route::get('Fruit-storage/quantity-check/{id}', [\App\Http\Controllers\FruitStorageController::class, 'QuantityCheckAtNursery'])->name('sign.stage21');
-    Route::patch('/Fruit-storage/store/quantity-check/{id}', [\App\Http\Controllers\FruitStorageController::class, 'StoreQuantityCheckAtNursery']);
+    // Route::get('Fruit-storage/quantity-check/{id}', [\App\Http\Controllers\FruitStorageController::class, 'QuantityCheckAtNursery'])->name('sign.stage21');
+    // Route::patch('/Fruit-storage/store/quantity-check/{id}', [\App\Http\Controllers\FruitStorageController::class, 'StoreQuantityCheckAtNursery']);
     Route::get('Fruit-storage/quality-check/{id}', [\App\Http\Controllers\FruitStorageController::class, 'QualityCheckAtNursery'])->name('sign.stage22');
     Route::patch('/Fruit-storage/store/quality-check/{id}', [\App\Http\Controllers\FruitStorageController::class, 'StoreQualityCheckAtNursery']);
     Route::patch('Fruit-storage/sign/quality-check/{id}', [\App\Http\Controllers\FruitStorageController::class, 'signQualityCheck']);

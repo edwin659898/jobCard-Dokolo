@@ -48,12 +48,12 @@
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4 bg-black-500">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
                 <img :src="$page.props.app.url" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
-                <span class="brand-text font-weight-light">JobCard Dokolo</span>
+                <span class="brand-text font-weight-light" style="color: yellow;">JobCard Dokolo</span>
             </a>
 
             <!-- Sidebar -->
@@ -130,7 +130,7 @@
                             </p>
                             </Link>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <Link :href="route('nuts-transportation')" class="nav-link"
                                 :class="{ 'active': $page.url.startsWith('/Transporting-nuts') }">
                             <i class="nav-icon fas fa-car"></i>
@@ -139,14 +139,14 @@
                                 <span class="right badge bg-indigo-500">7</span>
                             </p>
                             </Link>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <Link :href="route('nurseryShed')" class="nav-link"
                                 :class="{ 'active': $page.url.startsWith('/nursery-shed') }">
                             <i class="nav-icon fas fa-building"></i>
                             <p>
                                 Nursery shed C
-                                <span class="right badge bg-green-500">11</span>
+                                <span class="right badge bg-green-500">8</span>
                             </p>
                             </Link>
                         </li>
@@ -155,8 +155,8 @@
                                 :class="{ 'active': $page.url.startsWith('/sowing-bed-preparation') }">
                             <i class="nav-icon fas fa-bed"></i>
                             <p>
-                                Sowing Bed Prep
-                                <span class="right badge bg-orange-900">8</span>
+                                Seed Bed Prep
+                                <span class="right badge bg-orange-900">9</span>
                             </p>
                             </Link>
                         </li>
@@ -173,20 +173,20 @@
                         <li class="nav-item">
                             <Link :href="route('propagation')" class="nav-link"
                                 :class="{ 'active': $page.url.startsWith('/propagation') }">
-                            <i class="nav-icon fas fa-futbol"></i>
+                            <i class="fas fa-tree ml-2"></i>
                             <p>
                                 Propagation
-                                <span class="right badge bg-pink-500">9</span>
+                                <span class="right badge bg-pink-500">11</span>
                             </p>
                             </Link>
                         </li>
                         <li class="nav-item">
                                 <Link :href="route('prickingOut')" class="nav-link"
                                     :class="{ 'active': $page.url.startsWith('/pricking-out') }">
-                                <i class="nav-icon fas fa-futbol"></i>
+                                <i class="nav-icon fas fa-seedling"></i>
                                 <p>
                                     Pricking Out
-                                    <span class="right badge bg-red-500">13</span>
+                                    <span class="right badge bg-red-500">12</span>
                                 </p>
                                 </Link>
                             </li>
@@ -204,30 +204,30 @@
                         <li class="nav-item">
                             <Link :href="route('FirstHardening')" class="nav-link"
                                 :class="{ 'active': $page.url.startsWith('/first-hardening') }">
-                            <i class="nav-icon fas fa-seedling"></i>
+                            <i class="nav-icon fas fa-hard-hat"></i>
                             <p>
                                 First Hardening
-                                <span class="right badge bg-indigo-500">14</span>
+                                <span class="right badge bg-indigo-500">13</span>
                             </p>
                             </Link>
                         </li>
                         <li class="nav-item">
                             <Link :href="route('SecondHardening')" class="nav-link"
                                 :class="{ 'active': $page.url.startsWith('/second-hardening') }">
-                            <i class="nav-icon fas fa-seedling"></i>
+                            <i class="nav-icon fas fa-hard-hat"></i>
                             <p>
                                 Second Hardening
-                                <span class="right badge bg-lime-500">15</span>
+                                <span class="right badge bg-lime-500">14</span>
                             </p>
                             </Link>
                         </li>
                         <li class="nav-item">
                             <Link :href="route('SeedlingSelection')" class="nav-link"
                                 :class="{ 'active': $page.url.startsWith('/seedling-selection') }">
-                            <i class="nav-icon fas fa-seedling"></i>
+                            <i class="nav-icon fas fa-leaf"></i>
                             <p>
-                                Seed Selection
-                                <span class="right badge bg-orange-500">16</span>
+                                Seedling Selection
+                                <span class="right badge bg-orange-500">15</span>
                             </p>
                             </Link>
                         </li>
@@ -238,7 +238,7 @@
                             <i class="nav-icon fas fa-file"></i>
                             <p>
                                 Reports
-                                <span class="right badge bg-green-500">P</span>
+                                <span class="right badge bg-green-500">R</span>
                             </p>
                             </Link>
                         </li>
@@ -293,7 +293,7 @@
         <slot />
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2022 <a href="#">Better Globe Forestry LTD</a>.</strong>
+            <strong>Copyright &copy; 2025 <a href="#">Better Globe Forestry LTD</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
                 <b>Prosperity with purpose</b>

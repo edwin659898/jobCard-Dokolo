@@ -1,0 +1,1 @@
+import{_ as r}from"./_plugin-vue_export-helper-c27b6911.js";import{o,g as t}from"./app-1f705ad5.js";const c={},s=["src"];function n(e,a){return o(),t("img",{class:"bg-white flex justify-center items-center border-4 border-green-500",src:e.$page.props.app.url,alt:""},null,8,s)}const l=r(c,[["render",n]]);export{l as A};

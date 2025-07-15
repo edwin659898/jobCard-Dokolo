@@ -103,50 +103,50 @@ class FruitStorageController extends Controller
         return redirect()->back()->with('success', 'Updated Successfully');
     }
 
-    public function QuantityCheckAtNursery($id)
-    {
-        $jobCard = $this->GetJobcard($id);
-        $start_date = $this->GetDate($id);
+    // public function QuantityCheckAtNursery($id)
+    // {
+    //     $jobCard = $this->GetJobcard($id);
+    //     $start_date = $this->GetDate($id);
 
-        return Inertia::render('FruitStorage/QuantityCheck', [
-            'Jobcard' => $jobCard,
-            'BeginDate' => $start_date,
-        ]);
-    }
+    //     return Inertia::render('FruitStorage/QuantityCheck', [
+    //         'Jobcard' => $jobCard,
+    //         'BeginDate' => $start_date,
+    //     ]);
+    // }
 
-    //store data for quantity check at nursery
-    public function StoreQuantityCheckAtNursery(Request $request, $id)
-    {
-        $data = $request->validate([
-            'quantity' => 'required',
-        ]);
+    // // store data for quantity check at nursery
+    // public function StoreQuantityCheckAtNursery(Request $request, $id)
+    // {
+    //     $data = $request->validate([
+    //         'quantity' => 'required',
+    //     ]);
 
-        $fruit = Fruit::findOrFail($id);
+    //     $fruit = Fruit::findOrFail($id);
 
-        $jobcard = JobCard::findOrFail($fruit->job_card_id);
+    //     $jobcard = JobCard::findOrFail($fruit->job_card_id);
 
-        $timeline = Timeline::where([
-            'job_card_id' => $jobcard->id,
-            'child_activity_id' => Session::get('current_activity_id')
-        ])->whereDate('created_at', Carbon::today())->first();
+    //     $timeline = Timeline::where([
+    //         'job_card_id' => $jobcard->id,
+    //         'child_activity_id' => Session::get('current_activity_id')
+    //     ])->whereDate('created_at', Carbon::today())->first();
 
-        if (!$timeline) {
-            Timeline::create([
-                'start_date' => Carbon::now()->format('Y-m-d, H:i:s'),
-                'job_card_id' => $jobcard->id,
-                'child_activity_id' => Session::get('current_activity_id')
-            ]);
-        }
+    //     if (!$timeline) {
+    //         Timeline::create([
+    //             'start_date' => Carbon::now()->format('Y-m-d, H:i:s'),
+    //             'job_card_id' => $jobcard->id,
+    //             'child_activity_id' => Session::get('current_activity_id')
+    //         ]);
+    //     }
 
-        Stock::create([
-            'fruit_id' => $fruit->id,
-            'quantity' => $request->quantity,
-            'job_card_id' => $jobcard->id,
-            'child_activity_id' => Session::get('current_activity_id')
-        ]);
+    //     Stock::create([
+    //         'fruit_id' => $fruit->id,
+    //         'quantity' => $request->quantity,
+    //         'job_card_id' => $jobcard->id,
+    //         'child_activity_id' => Session::get('current_activity_id')
+    //     ]);
 
-        return redirect()->back()->with('success', 'Update Successfully');
-    }
+    //     return redirect()->back()->with('success', 'Update Successfully');
+    // }
 
     //view quality check blade
     public function QualityCheckAtNursery($id)
